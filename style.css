@@ -1430,7 +1430,7 @@ xclip
 }
 
 .hoverbutton {
-    background-color: #333333;
+    background-color: rgba(40,169,226,0);
     position: absolute;
     color: #ffffff !important;
     top: 70%;
@@ -1708,8 +1708,18 @@ hr.invis1 {
 	display: inline-block;
 	text-align: center;
 }
-
-
+/*------------------------------------------------------------------
+    Blog
+-------------------------------------------------------------------*/
+.card__wrap--inner {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+.flexible {
+    flex-grow: 1;
+}
 /*------------------------------------------------------------------
     Our Team
 -------------------------------------------------------------------*/
