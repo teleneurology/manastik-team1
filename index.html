@@ -712,29 +712,32 @@
     
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script> 
-		$("#sendMessageButton").on("click", function(e){
-			e.preventDefault();
-	   });
-		function sendmail(event) {
-			
-			Email.send({
-			  name:document.getElementById('name').value,    
-			  Host : "smtp.gmail.com",
-			  Username : "shindedevangini04@gmail.com",
-			  Password : "Ganpati@01",
-			  To : "shindedevangini04@gmail.com",
-			  From : document.getElementById('email').value,
-			  Subject : "This is the subject",
-			  Body : document.getElementById('message').value
-			  }).then(function(response){ 
-			   if (response == 'OK') {              
-				   alert("Mail sent succeessfully");
-				} else {
-					console.log(response);
-				} 
-			 });
 	 
-		}    
+	
+			
+			function sendmail(event) {
+
+				Email.send({
+	
+					SecureToken : "a8bb3dce-0cd9-4f62-a970-02ba559604d7",
+	
+					To : 'shindedevangini@gmail.com',
+	
+					From : "app.info.45@gmail.com",
+	
+					Subject : "This is the subject",
+	
+					Body : "And this is the body"
+	
+				}).then(
+	
+				  message => alert(message)
+	
+				);
+	
+			}    
+	 
+		
 	  </script>
 </body>	
 </html>
