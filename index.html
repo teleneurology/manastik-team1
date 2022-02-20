@@ -636,7 +636,7 @@
                 <div class="col-md-12">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form action="#" method="post" onsubmit="return check();" role="form" >
+                        <form action="javascript:sendmail()" method="post">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -717,6 +717,11 @@
 			
 			function sendmail(event) {
                 event.preventDefault();
+				var name = $('#name').val();
+			var email = $('#email').val();
+			var phone = $('#phone').val();
+      var message = $('#message').val();
+				var Body='Name: '+name+'<br>Email: '+email+'<br>Phone: '+phone+'<br>Message: '+message;
 				Email.send({
 	
 					SecureToken : "a8bb3dce-0cd9-4f62-a970-02ba559604d7",
@@ -725,9 +730,9 @@
 	
 					From : "app.info.45@gmail.com",
 	
-					Subject : "This is the subject",
+					Subject : "Mail from website",
 	
-					Body : "And this is the body"
+					Body : Body,
 	
 				}).then(
 	
